@@ -4,7 +4,7 @@ This repository is the new community powered Cinema 4D SDK. Download,
 compile and you are ready to learn the Cinema 4D Plugin API from these
 examples. \*
 
-*\* that is the goal, we are just starting out with this project.*
+_\* that is our goal, we are just starting out with this project._
 
 __Minimum Requirements__: MAXON introduced major name changes to its
 Plugin API with the release of Cinema 4D R15. The code in this
