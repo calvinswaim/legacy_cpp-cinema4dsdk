@@ -1,13 +1,19 @@
-# Compiled Object files
-*.slo
-*.lo
+# Visual Studio
+*.pdb
+*.ilk
+*.lib
+*.exp
+
+# Object files
+obj/
+*.obj
 *.o
 
-# Compiled Dynamic libraries
-*.so
+# Plugin suffixes
+*.cdl
+*.cdl64
 *.dylib
+*.dylib64
+*.so
+*.so64
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
