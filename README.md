@@ -24,20 +24,17 @@ otherwise, licensed under the MIT license.
 
 ## Structure
 
-There is a strict structure to this repository. All project files
+There is a strict structure to this repository. All __project files__
 belonging to compilation tools such as Visual Studio, XCode or
-Makefiles are located in the `projects/` directory.
+Makefiles are located in the `projects/` directory. Compilation tools
+should output __object files__ to the `obj/` directory while the build
+results are the `cinema4dsdk.cdl64` or `cinema4dsdk.dylib`, respective
+to the target platform.
 
-Compilation tools should output object files to the `obj/` directory
-while the build results are the `cinema4dsdk.cdl64` or
-`cinema4dsdk.dylib`, respective to the target platform.
-
-All source files (ie. `*.cpp` files) are contained in the `src/`
-directory while include files are contained in the `include/`
-directory.
-
-The Cinema 4D plugin resource folder is called `res/` which should
-also contain any image and other required files.
+All __source files__ (ie. `*.cpp` files) are contained in the `src/`
+directory while __includable files__ are contained in the `include/`
+directory. The Cinema 4D plugin __resource folder__ is called `res/`
+which should also contain any image and other required files.
 
 ## Compile
 
@@ -55,3 +52,6 @@ you want to use any of these.
 
 - Add Visual Studio project files
 - Add XCode project files
+
+
+  [c4d-make]: https://github.com/nr-tools/c4d-make
