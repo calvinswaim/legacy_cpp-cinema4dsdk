@@ -22,6 +22,35 @@ request if you want to contribute.
 __License__: This source code in this repository is, if not declared
 otherwise, licensed under the MIT license.
 
+## Structure
+
+There is a strict structure to this repository. All project files
+belonging to compilation tools such as Visual Studio, XCode or
+Makefiles are located in the `projects/` directory.
+
+Compilation tools should output object files to the `obj/` directory
+while the build results are the `cinema4dsdk.cdl64` or
+`cinema4dsdk.dylib`, respective to the target platform.
+
+All source files (ie. `*.cpp` files) are contained in the `src/`
+directory while include files are contained in the `include/`
+directory.
+
+The Cinema 4D plugin resource folder is called `res/` which should
+also contain any image and other required files.
+
+## Compile
+
+The project files to compile the Cinema 4D SDK are located in the
+`projects/` folder. To compile with [`c4d-make`][c4d-make], invoke
+
+    $ pwd
+    <...>/cpp-cinema4dsdk
+    $ make -f projects/c4d-make/Makefile <target>
+
+Open the project files for Visual Studio or XCode respectively if
+you want to use any of these.
+
 ## Todo
 
 - Add Visual Studio project files
