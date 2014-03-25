@@ -42,7 +42,7 @@ The project files to compile the Cinema 4D SDK are located in the
 `projects/` folder. To compile with [`c4d-make`][c4d-make], invoke
 
     $ pwd
-    <...>/cpp-cinema4dsdk
+    <...>/Cinema 4D R15/plugins/cpp-cinema4dsdk
     $ make -f projects/c4d-make/Makefile <target>
 
 Open the project files for Visual Studio or XCode respectively if
