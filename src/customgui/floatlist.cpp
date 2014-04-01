@@ -20,6 +20,7 @@
  * THE SOFTWARE.
  *
  * file: src/customgui/floatlist.cpp
+ * description: implements a new datatype and UI for Cinema 4D
  */
 
 #include <c4d.h>
