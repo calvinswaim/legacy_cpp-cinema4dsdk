@@ -82,6 +82,10 @@ public:
         return items.Pop();
     }
 
+    void Erase(Int32 index) {
+        items.Erase(index);
+    }
+
     Int32 GetCount() const {
         return items.GetCount();
     }

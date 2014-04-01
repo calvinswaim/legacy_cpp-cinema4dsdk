@@ -313,10 +313,19 @@ class FloatlistGui : public iCustomGui {
         GROUP_MAIN = 20000,
         TEXT_MULTIPLE,
         BUTTON_PLUS,
-        BUTTON_MINUS,
 
         // The start ID for the dynamic widgets.
         DYNAMIC_START,
+    };
+
+    /**
+     * Other constants.
+     */
+    enum {
+        DYNAMIC_NAME = 0,
+        DYNAMIC_SLIDER = 1,
+        DYNAMIC_REMOVEBUTTON = 2,
+        DYNAMIC_ITEMS = 3,
 
         // A shorthand for the full scalefit flag.
         HV_SCALEFIT = BFH_SCALEFIT | BFV_SCALEFIT,
@@ -380,7 +389,7 @@ public:
 
         // Flush the dialog and re-create the main group.
         LayoutFlushGroup(0);
-        GroupBegin(GROUP_MAIN, HV_SCALEFIT, (m_multiple ? 1 : 2), 0, "", 0);
+        GroupBegin(GROUP_MAIN, HV_SCALEFIT, (m_multiple ? 1 : 3), 0, "", 0);
         GroupBorderNoTitle(BORDER_ROUND);
         GroupBorderSpace(4, 4, 4, 4);
 
@@ -396,19 +405,18 @@ public:
             Int32 id = DYNAMIC_START;
             for (Int32 index=0; index < m_count; index++) {
                 auto& item = (*data)[index];
-                AddStaticText(id++, BFH_LEFT, 0, 0, item.name, 0);
-                AddEditSlider(id++, BFH_SCALEFIT);
+                AddStaticText(id + DYNAMIC_NAME, BFH_LEFT, 0, 0, item.name, 0);
+                AddEditSlider(id + DYNAMIC_SLIDER, BFH_SCALEFIT);
+                AddButton(id + DYNAMIC_REMOVEBUTTON, 0, 0, 0, "X");
+                id += DYNAMIC_ITEMS;
             }
 
             GroupEnd();
 
             // Add Buttons to add and remove items.
             GroupBegin(0, 0, 0, 1, "", 0);
-            AddButton(BUTTON_PLUS, 0, 0, 0, "+");
-            AddButton(BUTTON_MINUS, 0, 0, 0, "-");
+            AddButton(BUTTON_PLUS, BFH_RIGHT, 0, 0, "+");
             GroupEnd();
-
-            Enable(BUTTON_MINUS, m_count > 0);
         }
 
         LayoutChanged(0);
@@ -430,7 +438,7 @@ public:
             // Calculate the ID of the slider for the current
             // element of the Floatlist and set the value to
             // the dialog.
-            Int32 id = DYNAMIC_START + i * 2 + 1;
+            Int32 id = DYNAMIC_START + i * DYNAMIC_ITEMS + DYNAMIC_SLIDER;
             SetPercent(id, item.value);
         }
 
@@ -485,29 +493,38 @@ public:
                     }
                 }
                 break;
-            case BUTTON_MINUS:
-                if (m_data.GetCount() > 0) {
-                    m_data.Pop();
-                    updateValue = true;
-                }
-                break;
         }
 
-        // Check if the changed parameter is one of the sliders
-        // and update the item in that case.
-        if (id >= DYNAMIC_START && id < DYNAMIC_START + count * 2) {
-            Int32 index = (id - DYNAMIC_START) / 2;
+        // Check if the changed parameter is one of the items of
+        // the dynamic dialog group.
+        if (id >= DYNAMIC_START && id < DYNAMIC_START + count * DYNAMIC_ITEMS) {
+
+            // Then calculate the kind of the item that was pressed
+            // and the index of the row.
+            Int32 kind = (id - DYNAMIC_START) % DYNAMIC_ITEMS;
+            Int32 index = (id - DYNAMIC_START - kind) / DYNAMIC_ITEMS;
+
+            // We only want to do some of the stuff if the accessed row
+            // is not out of the bounds (just to be safe).
             if (index >= 0 && index < count) {
+                // Update the value if the slider was changed.
+                if (kind == DYNAMIC_SLIDER) {
+                    // Get the value of the  slider.
+                    Float value;
+                    GetFloat(id, value);
 
-                // Get the value of the  slider.
-                Float value;
-                GetFloat(id, value);
+                    // Assign it to the item and make sure the parent
+                    // is notified about the changed data.
+                    auto& item = m_data[index];
+                    item.value = value;
+                    updateValue = true;
+                }
 
-                // Assign it to the item and make sure the parent
-                // is notified about the changed data.
-                auto& item = m_data[index];
-                item.value = value;
-                updateValue = true;
+                // Or remove the item if the button was pressed.
+                if (kind == DYNAMIC_REMOVEBUTTON) {
+                    m_data.Erase(index);
+                    updateValue = true;
+                }
             }
         }
 
