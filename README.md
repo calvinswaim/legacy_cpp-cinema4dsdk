@@ -36,6 +36,49 @@ directory while __includable files__ are contained in the `include/`
 directory. The Cinema 4D plugin __resource folder__ is called `res/`
 which should also contain any image and other required files.
 
+## File Headers
+
+Besides the license text, the documentation headers of source files
+contain useful information such as a short description, the experience
+level required to understand the example, tags and names of files that
+should be read and understand before reading that example file.
+
+Take the `src/starters/commands/group-objects.cpp` file for an instance:
+
+```cpp
+/**
+ * Copyright (c) 2013-2014  Niklas Rosenstein
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * [...]
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * file: src/starters/commands/group-objects.cpp
+ * description:
+ *    This plugin command groups all selected objects under a
+ *    single Null object.
+ * tags: command simple muchdoc group object-creation hierarchy-modifications
+ * level: beginner
+ * read-before: create-cube.cpp
+ */
+```
+
+__file__: The full path of the file in the Cinema4D SDK project relative
+to the projects main directory.
+
+__description__: A short description of the plugin. Some files might have
+an `*.md` file in the same directory with the same name which contains a
+more detailed description of the example.
+
+__tags__: A list of the tags that match with the example.
+
+__level__: The level someone requires to understand the example.
+
+__read-before__: The name of one or more files that should be read and
+understood before reading the current file.
+
 ## Compile
 
 The project files to compile the Cinema 4D SDK are located in the
