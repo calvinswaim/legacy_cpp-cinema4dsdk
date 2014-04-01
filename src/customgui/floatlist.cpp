@@ -479,7 +479,7 @@ public:
                     auto item = m_data.Append();
                     if (item != nullptr) {
                         item->name = name;
-                        item->value = 42.0;
+                        item->value = 0.0;
                         updateValue = true;
                     }
                 }
