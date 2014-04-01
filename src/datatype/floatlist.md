@@ -11,7 +11,7 @@ This example involves 4 classes that must play together nicely.
 
 ### `FloatlistData`
 
-Located in `cinema4dsdk/customgui/floatlist.h`
+Located in `cinema4dsdk/datatype/floatlist.h`
 
 A subclass of the CustomDataType class which contains the
 actual data that is being interchanged. You can imagine it
@@ -60,6 +60,6 @@ parser when dialog resources are being parsed.
 ## Frequently Asked Questions
 
 __Q__: How does Cinema know that the FloatlistGui should be used for
-   the FloatlistData datatype?  
+   the FloatlistData datatype?
 __A__: It is declared in `FloatlistDataType::GetDefaultProperties()`
 

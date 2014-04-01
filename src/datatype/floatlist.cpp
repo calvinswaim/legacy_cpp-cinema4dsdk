@@ -19,13 +19,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/customgui/floatlist.cpp
+ * file: src/datatype/floatlist.cpp
  * description: implements a new datatype and UI for Cinema 4D
+ * level: expert
+ * tags: custom-gui custom-datatype dynamic-ui
  */
 
 #include <c4d.h>
 #include <cinema4dsdk/stringutils.h>
-#include <cinema4dsdk/customgui/floatlist.h>
+#include <cinema4dsdk/datatype/floatlist.h>
 
 
 static String ToString(const FloatlistData& data, Bool detailed=false) {
@@ -617,10 +619,10 @@ public:
 
 
 /**
- * Called from src/main.cpp on PluginStart(). This function registers
+ * Called from `src/main.cpp` on `PluginStart()`. This function registers
  * the Floatlist custom datatype and GUI to Cinema 4D.
  */
-Bool Register_FloatlistCustomGui() {
+Bool Register_Datatype_Floatlist() {
     if (!FloatlistDataType::Register()) {
         GePrint("DEBUG: Could not register FloatlistDataType");
         return false;

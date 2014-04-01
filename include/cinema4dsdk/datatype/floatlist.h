@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: cinema4dsdk/customgui/floatlist.h
+ * file: cinema4dsdk/datatype/floatlist.h
  */
 
 #ifndef CINEMA4DSDK_CUSTOMGUI_FLOATLIST_H

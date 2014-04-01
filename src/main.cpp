@@ -25,10 +25,10 @@
 
 #include <c4d.h>
 
-extern Bool Register_FloatlistCustomGui();
+extern Bool Register_Datatype_Floatlist();
 
 Bool PluginStart() {
-    Register_FloatlistCustomGui();
+    Register_Datatype_Floatlist();
     return true;
 }
 
