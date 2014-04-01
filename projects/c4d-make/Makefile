@@ -60,7 +60,10 @@ BASEDIR_INCLUDE = include
 TARGET_NAME = cinema4dsdk
 
 # Collect a list of all source-files from the source-files directory.
-SOURCES = $(wildcard $(BASEDIR_SRC)/*.cpp)
+SOURCES = \
+  $(wildcard $(BASEDIR_SRC)/*.cpp) \
+  $(wildcard $(BASEDIR_SRC)/*/*.cpp) \
+  $(wildcard $(BASEDIR_SRC)/*/*/*.cpp) \
 
 # Generate the list of object files from the source-file. The object
 # files will be put into an obj/{platform}[-dbg] directory.
