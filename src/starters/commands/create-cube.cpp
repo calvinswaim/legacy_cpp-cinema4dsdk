@@ -23,7 +23,8 @@
  * description: This plugin command creates a Cube object and places
  *    it at the position of the selected object. If there is
  *    no active object, it is placed at the world's origin.
- * tags: command simple muchdoc
+ * tags: command simple muchdoc object-creation
+ * level: beginner
  */
 
 // Include the Cinema 4D header files that are required
@@ -69,7 +70,7 @@ Bool Register_Starters_Command_CreateCube() {
     // Finally, register the plugin to Cinema 4D. :-)
     return RegisterCommandPlugin(
             ID_CREATECUBE,                    // Plugin ID,
-            "starters/command/Create Cube",   // Command Name
+            "starters/commands/Create Cube",  // Command Name
             PLUGINFLAG_COMMAND_HOTKEY,        // Flags (options for the plugin)
             nullptr,                          // Icon (none here)
             help_string,                      // Help string (obviously..)

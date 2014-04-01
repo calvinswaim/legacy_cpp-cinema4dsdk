@@ -26,7 +26,18 @@
 
 #include <c4d.h>
 
-extern Bool Register_Starters_Command_CreateCube();
+/**
+ * A small makro that is used to easily call a register function from
+ * another compiled object file that starts with the name
+ * `Register_Starters_`.
+ */
+#define REGISTER(name) \
+    do { \
+        extern Bool Register_Starters_##name(); \
+        if (!Register_Starters_##name()) { \
+            GePrint("DEBUG: Register_Starters_##name() failed"); \
+        } \
+    } while (0)
 
 /**
  * Invokes all registration functions from the starters module of
@@ -34,9 +45,8 @@ extern Bool Register_Starters_Command_CreateCube();
  * `src/main.cpp` file.
  */
 Bool Register_Starters() {
-    if (!Register_Starters_Command_CreateCube()) {
-        GePrint("DEBUG: Register_Starters_Command_CreateCube() failed");
-    }
+    REGISTER(Command_CreateCube);
+    REGISTER(Command_GroupObjects);
     return true;
 }
 
