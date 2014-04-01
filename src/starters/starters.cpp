@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2014  Niklas Rosenstein
+ * Copyright (c) 2013-2014 Niklas Rosenstein
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -19,30 +19,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/main.cpp
- * description: registers all Cinema 4D SDK plugins
+ * file: src/starters/starters.cpp
+ * description: registers all plugin examples for starters of the Cinema
+ *     4D Plugin SDK.
  */
 
 #include <c4d.h>
 
-extern Bool Register_Starters(); // src/starters/starters.cpp
+extern Bool Register_Starters_Command_CreateCube();
 
-Bool PluginStart() {
-    Register_Starters();
-    return true;
-}
-
-Bool PluginMessage(Int32 kind, void* pData) {
-    switch (kind) {
-        // Initialize the global plugin resource which is
-        // required when opening dialogs, registering node
-        // parameter descriptions and loading resource strings.
-        case C4DPL_INIT_SYS:
-            return ::resource.Init();
+/**
+ * Invokes all registration functions from the starters module of
+ * the Cinema 4D Plugin SDK. This is reduce the complexity of the
+ * `src/main.cpp` file.
+ */
+Bool Register_Starters() {
+    if (!Register_Starters_Command_CreateCube()) {
+        GePrint("DEBUG: Register_Starters_Command_CreateCube() failed");
     }
     return true;
-}
-
-void PluginEnd() {
 }
 
