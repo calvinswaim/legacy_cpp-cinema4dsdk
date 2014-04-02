@@ -47,6 +47,7 @@
 Bool Register_Starters() {
     REGISTER(Command_CreateCube);
     REGISTER(Command_GroupObjects);
+    REGISTER(Command_IterHierarchy);
     return true;
 }
 

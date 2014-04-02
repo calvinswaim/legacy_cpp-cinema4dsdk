@@ -20,17 +20,16 @@
  * THE SOFTWARE.
  *
  * file: src/starters/commands/group-objects.cpp
- * description:
- *    This plugin command groups all selected objects under a
+ * description: This plugin command groups all selected objects under a
  *    single Null object.
- * tags: command simple muchdoc group object-creation hierarchy-modifications
+ * tags: command simple muchdoc object-creation hierarchy-modifications
  * level: beginner
  * read-before: create-cube.cpp
  */
 
 #include <c4d.h>
 
-const static Int32 ID_GROUPOBJECTS = 1031055;
+static const Int32 ID_GROUPOBJECTS = 1031055;
 
 class GroupObjectsCommand : public CommandData {
 

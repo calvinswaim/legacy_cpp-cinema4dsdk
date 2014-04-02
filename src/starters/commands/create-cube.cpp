@@ -33,7 +33,7 @@
 
 // Every single plugin requires a unique ID, which can be
 // obtained from the plugincafe.
-const static Int32 ID_CREATECUBE = 1031054;
+static const Int32 ID_CREATECUBE = 1031054;
 
 // This class overwrites methods from the Cinema 4D SDK
 // `CommandData` class to implement a custom action when
