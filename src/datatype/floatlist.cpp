@@ -28,7 +28,7 @@
 #include <c4d.h>
 #include <cinema4dsdk/stringutils.h>
 #include <cinema4dsdk/datatype/floatlist.h>
-
+#include "res/c4d_symbols.h"
 
 static String ToString(const FloatlistData& data, Bool detailed=false) {
     String result = "FloatlistData(" + ToString(data.GetCount()) + ")";
@@ -360,7 +360,7 @@ public:
     FloatlistGui(const BaseContainer& settings, CUSTOMGUIPLUGIN* plugin)
     : super(settings, plugin),
       m_multiple(false),
-      m_count(-2)
+      m_count(0)
     { }
 
     /**
@@ -396,7 +396,8 @@ public:
         GroupBorderSpace(4, 4, 4, 4);
 
         if (m_multiple) {
-            AddStaticText(TEXT_MULTIPLE, BFH_LEFT, 0, 0, "<<< Multiple Values >>>", 0);
+            String name = GeLoadString(IDS_MULTIPLEVALUES);
+            AddStaticText(TEXT_MULTIPLE, BFH_LEFT, 0, 0, name, 0);
             GroupEnd();
 
             m_count = -1;
@@ -415,8 +416,8 @@ public:
 
             GroupEnd();
 
-            // Add Buttons to add and remove items.
-            GroupBegin(0, 0, 0, 1, "", 0);
+            // Add Button to add items.
+            GroupBegin(0, BFH_SCALEFIT, 0, 1, "", 0);
             AddButton(BUTTON_PLUS, BFH_RIGHT, 0, 0, "+");
             GroupEnd();
         }
@@ -463,9 +464,7 @@ public:
 
         m_multiple = tristate.GetTri();
         if (!m_multiple) temp = FloatlistData::Get(tristate.GetValue());
-        if (!temp) {
-            m_multiple = true;
-        }
+        if (!temp) m_multiple = true;
 
         Rebuild(temp);
         Update(temp);

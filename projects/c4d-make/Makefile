@@ -73,7 +73,7 @@ OBJECTS = $(call C4D_GEN_OBJECTNAMES,$(C4D_OBJECTS_DIR)/,$(BASEDIR_SRC)/,$(SOURC
 DIRS = $(sort $(dir $(OBJECTS)))
 
 # A list of additional include directories. Will be prefixed later.
-INCLUDES = res/description/ $(BASEDIR_INCLUDE)/ $(BASEDIR_SRC)/
+INCLUDES = ./ res/description/ $(BASEDIR_INCLUDE)/ $(BASEDIR_SRC)/
 
 # Generate the target output-name.
 TARGET = $(call C4D_GEN_DLLNAME, $(TARGET_NAME))
