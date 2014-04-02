@@ -23,7 +23,7 @@
  * description: This plugin command demonstrates how to recursively
  *    iterate over a documents object hierarchy and print them to
  *    the console.
- * tags: command simple muchdoc hierarchy-iteration recursion
+ * tags: command simple muchdoc hierarchy-iteration recursion console
  * level: beginner
  * read-before: create-cube.cpp group-objects.cpp
  */
@@ -42,7 +42,7 @@ public:
 
 };
 
-Bool Register_Starters_Command_IterHierarchy() {
+Bool Register_Starter_Command_IterHierarchy() {
     String help_string("C++ SDK Example Command Plugin: Demonstrates recursive "
                        "iteration through the object tree by printing a "
                        "hierarchical representation to the console.");

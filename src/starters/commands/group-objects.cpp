@@ -22,7 +22,7 @@
  * file: src/starters/commands/group-objects.cpp
  * description: This plugin command groups all selected objects under a
  *    single Null object.
- * tags: command simple muchdoc object-creation hierarchy-modifications
+ * tags: command simple muchdoc object-creation hierarchy-modifications undos
  * level: beginner
  * read-before: create-cube.cpp
  */
@@ -41,7 +41,7 @@ public:
 
 };
 
-Bool Register_Starters_Command_GroupObjects() {
+Bool Register_Starter_Command_GroupObjects() {
     String help_string("C++ SDK Example Command Plugin: Groups the "
                        "selected objects by inserting them under a Null.");
     CommandData* plugin_command = NewObj(GroupObjectsCommand);

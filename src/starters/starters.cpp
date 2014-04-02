@@ -33,9 +33,9 @@
  */
 #define REGISTER(name) \
     do { \
-        extern Bool Register_Starters_##name(); \
-        if (!Register_Starters_##name()) { \
-            GePrint("DEBUG: Register_Starters_##name() failed"); \
+        extern Bool Register_Starter_##name(); \
+        if (!Register_Starter_##name()) { \
+            GePrint("DEBUG: Register_Starter_##name() failed"); \
         } \
     } while (0)
 
@@ -48,6 +48,7 @@ Bool Register_Starters() {
     REGISTER(Command_CreateCube);
     REGISTER(Command_GroupObjects);
     REGISTER(Command_IterHierarchy);
+    REGISTER(Command_SpheresOnPoints);
     return true;
 }
 

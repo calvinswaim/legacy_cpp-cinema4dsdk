@@ -23,7 +23,7 @@
  * description: This plugin command creates a Cube object and places
  *    it at the position of the selected object. If there is
  *    no active object, it is placed at the world's origin.
- * tags: command simple muchdoc object-creation
+ * tags: command simple muchdoc object-creation undos
  * level: beginner
  */
 
@@ -56,7 +56,7 @@ public:
 // Cinema 4D. It is (and must be) called from the `PluginStart()`
 // function of a plugin library. In this case, it is called from
 // `RegisterStarters()` in `src/starters/starters.cpp`
-Bool Register_Starters_Command_CreateCube() {
+Bool Register_Starter_Command_CreateCube() {
     // This string is used later for registering the plugin.
     String help_string("C++ SDK Example Command Plugin: Creates a cube and "
                        "assigns the matrix of the selected object to it.");
