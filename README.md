@@ -22,6 +22,12 @@ request if you want to contribute.
 __License__: This source code in this repository is, if not declared
 otherwise, licensed under the MIT license.
 
+## New to the Cinema 4D plugin development?
+
+Take a look at the [starters/][] folder, it contains plugin examples
+that are suited for very beginners. Having experience in programming
+C++ code however is of very much advantage.
+
 ## Structure
 
 There is a strict structure to this repository. All __project files__
