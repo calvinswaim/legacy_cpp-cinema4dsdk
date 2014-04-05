@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/starters/commands/group-objects.cpp
+ * file: cpp-cinema4dsdk/src/starters/commands/group-objects.cpp
  * description: This plugin command groups all selected objects under a
  *    single Null object.
  * tags: command simple muchdoc object-creation hierarchy-modifications undos

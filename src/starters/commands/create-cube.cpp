@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/starters/commands/create-cube.cpp
+ * file: cpp-cinema4dsdk/src/starters/commands/create-cube.cpp
  * description: This plugin command creates a Cube object and places
  *    it at the position of the selected object. If there is
  *    no active object, it is placed at the world's origin.

@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/main.cpp
+ * file: cpp-cinema4dsdk/src/main.cpp
  * description: registers all Cinema 4D SDK plugins
  */
 
