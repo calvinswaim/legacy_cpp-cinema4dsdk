@@ -93,9 +93,10 @@ Bool GroupObjectsCommand::Execute(BaseDocument* doc) {
         // Manager so it is safe to perform the cast.
         BaseObject* obj = static_cast<BaseObject*>(array->GetIndex(i));
 
-        // Tell the document we are about to perform some
-        // hierarchy changes to the object.
-        doc->AddUndo(UNDOTYPE_CHANGE, obj);
+        // Tell the document we are about to remove the object
+        // from the hierarchy so that it will be restored when
+        // and undo is performed.
+        doc->AddUndo(UNDOTYPE_DELETE, obj);
 
         // Remove the object from the document and insert it
         // under the root.
