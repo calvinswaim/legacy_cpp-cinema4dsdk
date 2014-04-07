@@ -101,6 +101,8 @@ The project files to compile the Cinema 4D SDK are located in the
 Open the project files for Visual Studio or XCode respectively if
 you want to use any of these.
 
+> *Note*: The project files for Visual Studio and XCode are not yet ready.
+
 ## Todo
 
 - Add Visual Studio project files
