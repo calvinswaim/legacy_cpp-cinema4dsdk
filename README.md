@@ -42,6 +42,10 @@ directory while __includable files__ are contained in the `include/`
 directory. The Cinema 4D plugin __resource folder__ is called `res/`
 which should also contain any image and other required files.
 
+You may also want to look at the readme file that is available for
+many source files. These have the same name but the Markdown suffix 
+(`*.md`) and provide additional information to the example.
+
 ## File Headers
 
 Besides the license text, the documentation headers of source files
