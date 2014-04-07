@@ -33,7 +33,7 @@
 
 // Every single plugin requires a unique ID, which can be
 // obtained from the plugincafe.
-static const Int32 ID_CREATECUBE = 1031054;
+static const Int32 PLUGIN_ID = 1031054;
 
 // This class overwrites methods from the Cinema 4D SDK
 // `CommandData` class to implement a custom action when
@@ -69,7 +69,7 @@ Bool Register_Starter_Command_CreateCube() {
 
     // Finally, register the plugin to Cinema 4D. :-)
     return RegisterCommandPlugin(
-            ID_CREATECUBE,                    // Plugin ID,
+            PLUGIN_ID,                    // Plugin ID,
             "starters/commands/Create Cube",  // Command Name
             PLUGINFLAG_COMMAND_HOTKEY,        // Flags (options for the plugin)
             nullptr,                          // Icon (none here)

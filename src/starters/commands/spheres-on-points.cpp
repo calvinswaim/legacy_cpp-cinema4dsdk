@@ -30,7 +30,7 @@
 
 #include <c4d.h>
 
-static const Int32 ID_SPHERESONPOINTS = 1031057;
+static const Int32 PLUGIN_ID = 1031057;
 
 class SpheresOnPointsCommand : public CommandData {
 
@@ -57,7 +57,7 @@ Bool Register_Starter_Command_SpheresOnPoints() {
     if (!plugin_command) return false;
 
     return RegisterCommandPlugin(
-            ID_SPHERESONPOINTS,
+            PLUGIN_ID,
             "starters/commands/Spheres on Points",
             PLUGINFLAG_COMMAND_HOTKEY,
             nullptr,

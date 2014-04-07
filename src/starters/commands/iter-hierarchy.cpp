@@ -30,7 +30,7 @@
 
 #include <c4d.h>
 
-static const Int32 ID_ITERHIERARCHY = 1031056;
+static const Int32 PLUGIN_ID = 1031056;
 
 class IterHierarchyCommand : public CommandData {
 
@@ -43,14 +43,14 @@ public:
 };
 
 Bool Register_Starter_Command_IterHierarchy() {
-    String help_string("C++ SDK Example Command Plugin: Demonstrates recursive "
-                       "iteration through the object tree by printing a "
-                       "hierarchical representation to the console.");
+    String help_string("C++ SDK Example Command Plugin: Demonstrates "
+                       "working through the object tree recursively and "
+                       "printing the hierarchly structure to the console.");
     CommandData* plugin_command = NewObj(IterHierarchyCommand);
     if (!plugin_command) return false; // memory error
 
     return RegisterCommandPlugin(
-            ID_ITERHIERARCHY,
+            PLUGIN_ID,
             "starters/commands/Iter Hierarchy",
             PLUGINFLAG_COMMAND_HOTKEY,
             nullptr,

@@ -29,7 +29,7 @@
 
 #include <c4d.h>
 
-static const Int32 ID_GROUPOBJECTS = 1031055;
+static const Int32 PLUGIN_ID = 1031055;
 
 class GroupObjectsCommand : public CommandData {
 
@@ -48,7 +48,7 @@ Bool Register_Starter_Command_GroupObjects() {
     if (!plugin_command) return false; // memory error
 
     return RegisterCommandPlugin(
-            ID_GROUPOBJECTS,
+            PLUGIN_ID,
             "starters/commands/Group Objects",
             PLUGINFLAG_COMMAND_HOTKEY,
             nullptr,
