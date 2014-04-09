@@ -91,17 +91,25 @@ understood before reading the current file.
 
 ## Compile
 
-The project files to compile the Cinema 4D SDK are located in the
-`projects/` folder. To compile with [`c4d-make`][c4d-make], invoke
+> Note: The project files for the officially supported Visual Studio
+> and XCode versions are not yet available but will come soon.
+
+__c4dmake__
+
+The [c4dmake][] Makefile library for compiling the Cinema 4D API and
+Plugins are *not officially* supported. Support is only given on personal
+preference of the maintainer, [Niklas Rosenstein][].
+
+To compile using c4dmake, you must first install the Makefiles into
+the Cinema 4D plugins folder as described in the [repository][c4dmake]. The
+destination folder must be called `.../Cinema 4D R15/plugins/api/`.
+
+After you have compiled the Cinema 4D API using c4dmake, you can invoke the
+Makefile for the Cinema4DSDK.
 
     $ pwd
     <...>/Cinema 4D R15/plugins/cpp-cinema4dsdk
     $ make -f projects/c4d-make/Makefile plugin
-
-Open the project files for Visual Studio or XCode respectively if
-you want to use any of these.
-
-> *Note*: The project files for Visual Studio and XCode are not yet ready.
 
 ## Todo
 
@@ -109,4 +117,4 @@ you want to use any of these.
 - Add XCode project files
 
 
-  [c4d-make]: https://github.com/nr-tools/c4d-make
+  [c4dmake]: https://github.com/nr-tools/c4dmake
