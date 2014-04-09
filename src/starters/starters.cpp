@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2014  Niklas Rosenstein
+ * Copyright (c) 2013-2014 Niklas Rosenstein
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -19,32 +19,36 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: cpp-cinema4dsdk/src/main.cpp
- * description: registers all Cinema 4D SDK plugins
+ * file: cpp-cinema4dsdk/src/starters/starters.cpp
+ * description: registers all plugin examples for starters of the Cinema
+ *     4D Plugin SDK.
  */
 
 #include <c4d.h>
 
-extern Bool Register_Starters(); // src/starters/starters.cpp
-extern Bool Register_Datatype_Floatlist(); // src/datatype/floatlist.cpp
+/**
+ * A small makro that is used to easily call a register function from
+ * another compiled object file that starts with the name
+ * `Register_Starters_`.
+ */
+#define REGISTER(name) \
+    do { \
+        extern Bool Register_Starter_##name(); \
+        if (!Register_Starter_##name()) { \
+            GePrint("DEBUG: Register_Starter_##name() failed"); \
+        } \
+    } while (0)
 
-Bool PluginStart() {
-    Register_Starters();
-    Register_Datatype_Floatlist();
+/**
+ * Invokes all registration functions from the starters module of
+ * the Cinema 4D Plugin SDK. This is reduce the complexity of the
+ * `src/main.cpp` file.
+ */
+Bool Register_Starters() {
+    REGISTER(Command_CreateCube);
+    REGISTER(Command_GroupObjects);
+    REGISTER(Command_IterHierarchy);
+    REGISTER(Command_SpheresOnPoints);
     return true;
-}
-
-Bool PluginMessage(Int32 kind, void* pData) {
-    switch (kind) {
-        // Initialize the global plugin resource which is
-        // required when opening dialogs, registering node
-        // parameter descriptions and loading resource strings.
-        case C4DPL_INIT_SYS:
-            return ::resource.Init();
-    }
-    return true;
-}
-
-void PluginEnd() {
 }
 
