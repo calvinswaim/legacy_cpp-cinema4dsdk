@@ -98,7 +98,7 @@ __c4dmake__
 
 The [c4dmake][] Makefile library for compiling the Cinema 4D API and
 Plugins are *not officially* supported. Support is only given on personal
-preference of the maintainer, [Niklas Rosenstein][].
+preference of the maintainer, [Niklas Rosenstein](https://github.com/NiklasRosenstein).
 
 To compile using c4dmake, you must first install the Makefiles into
 the Cinema 4D plugins folder as described in the [repository][c4dmake]. The
