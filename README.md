@@ -43,7 +43,7 @@ directory. The Cinema 4D plugin __resource folder__ is called `res/`
 which should also contain any image and other required files.
 
 You may also want to look at the readme file that is available for
-many source files. These have the same name but the Markdown suffix 
+many source files. These have the same name but the Markdown suffix
 (`*.md`) and provide additional information to the example.
 
 ## File Headers
@@ -109,7 +109,7 @@ Makefile for the Cinema4DSDK.
 
     $ pwd
     <...>/Cinema 4D R15/plugins/cpp-cinema4dsdk
-    $ make -f projects/c4d-make/Makefile plugin
+    $ make -f projects/c4dmake/Makefile plugin
 
 ## Todo
 
