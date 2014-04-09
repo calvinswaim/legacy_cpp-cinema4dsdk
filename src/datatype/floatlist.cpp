@@ -360,7 +360,7 @@ public:
     FloatlistGui(const BaseContainer& settings, CUSTOMGUIPLUGIN* plugin)
     : super(settings, plugin),
       m_multiple(false),
-      m_count(0)
+      m_count(-2) // initialize to -2, indicates initialization value
     { }
 
     /**
@@ -380,14 +380,16 @@ public:
     void Rebuild(const FloatlistData* data) {
         // If we display the actual item but the count didn't change,
         // we do not have to rebuild.
-        if (!m_multiple && data->GetCount() == m_count)
+        if (!m_multiple && data->GetCount() == m_count) {
             return;
+        }
 
         // If we display the message that multiple values are fed
         // into the custom GUI, we don't have to rebuild if the
         // count was reset to -1.
-        else if (m_multiple && m_count < 0)
+        else if (m_multiple && m_count == -1) {
             return;
+        }
 
         // Flush the dialog and re-create the main group.
         LayoutFlushGroup(0);
