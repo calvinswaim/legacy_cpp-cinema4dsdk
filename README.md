@@ -102,10 +102,18 @@ preference of the maintainer, [Niklas Rosenstein](https://github.com/NiklasRosen
 
 To compile using c4dmake, you must first install the Makefiles into
 the Cinema 4D plugins folder as described in the [repository][c4dmake]. The
-destination folder must be called `.../Cinema 4D R15/plugins/api/`.
+destination folder must be called `.../Cinema 4D R15/plugins/api/`. This is
+a very simpley task. Please report any issues during the following steps to
+the [c4dmake][] issuetracker.
 
-After you have compiled the Cinema 4D API using c4dmake, you can invoke the
-Makefile for the Cinema4DSDK.
+    $ pwd
+    <...>/Cinema 4D R15/plugins/api
+    $ make lib
+    $ make lib DEBUG=true
+
+After this is complete without errors, you are __ready to compile__ the new
+Cinema 4D SDK. Please report any issues during the following steps to the
+issuetracker of the cpp-cinema4sdk repository.
 
     $ pwd
     <...>/Cinema 4D R15/plugins/cpp-cinema4dsdk
