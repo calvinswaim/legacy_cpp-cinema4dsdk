@@ -19,8 +19,9 @@ where full examples where requested to understand a certain part of
 the Plugin API. __Feel free__ to fork this repository and issue a pull
 request if you want to contribute.
 
-__License__: This source code in this repository is, if not declared
-otherwise, licensed under the MIT license.
+__License__: This source code in this repository, if not declared
+otherwise in the file header, is licensed under the MIT license. Coypright
+is granted to the original author of the source file.
 
 ## New to the Cinema 4D plugin development?
 
@@ -118,6 +119,19 @@ issuetracker of the cpp-cinema4sdk repository.
     $ pwd
     <...>/Cinema 4D R15/plugins/cpp-cinema4dsdk
     $ make -f projects/c4dmake/Makefile plugin
+    
+## Contributions are Welcome!
+
+Don't hesitate to fork this repository and add new stuff to it. GitHub allows
+you to make a request that we will merge your changes into the main repository,
+and so we will do! It would be nice if you'd stick to the File Headers information
+for each file as we plan to do something with this information.
+
+We prefer the MIT license, but if, for any special reasons, you want to put your
+contributed sources under a different license, we are fine with that as long as
+it does not contradict with other contents of the repository! The *copyright* is
+granted to the original author of the source file, so don't forget to add it to
+the file(s).
 
 ## Todo
 
