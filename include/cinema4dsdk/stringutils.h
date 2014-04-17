@@ -19,32 +19,43 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: cpp-cinema4dsdk/src/main.cpp
- * description: registers all Cinema 4D SDK plugins
+ * file: cinema4dsdk/stringutils.cpp
  */
+
+#ifndef CINEMA4DSDK_STRINGUTILS_H
+#define CINEMA4DSDK_STRINGUTILS_H
 
 #include <c4d.h>
 
-extern Bool Register_Starters(); // src/starters/starters.cpp
-extern Bool Register_Datatype_Floatlist(); // src/datatype/floatlist.cpp
-
-Bool PluginStart() {
-    Register_Starters();
-    Register_Datatype_Floatlist();
-    return true;
+inline String ToString(const Int32 value) {
+    return String::IntToString(value);
 }
 
-Bool PluginMessage(Int32 kind, void* pData) {
-    switch (kind) {
-        // Initialize the global plugin resource which is
-        // required when opening dialogs, registering node
-        // parameter descriptions and loading resource strings.
-        case C4DPL_INIT_SYS:
-            return ::resource.Init();
+inline String ToString(const Float value) {
+    return String::FloatToString(value);
+}
+
+inline String ToString(const Vector& v) {
+    String result = "Vector(" + ToString(v.x) + ", " + ToString(v.y);
+    return result + ", " + ToString(v.z) + ")";
+}
+
+inline String ToString(const BaseList2D* node) {
+    if (node == nullptr)
+        return "nullptr";
+    else
+        return node->GetName() + "(" + ToString(node->GetType()) + ")";
+}
+
+inline String ToString(const DescID& descid) {
+    String result = "DescID(";
+    Int32 depth = descid.GetDepth();
+    for (Int32 i=0; i < depth; i++) {
+        result += ToString(descid[i].id);
+        if (i != (depth - 1))
+            result += ", ";
     }
-    return true;
+    return result + ")";
 }
 
-void PluginEnd() {
-}
-
+#endif /* CINEMA4DSDK_STRINGUTILS_H */
