@@ -69,7 +69,7 @@ Bool Register_Starter_Command_CreateCube() {
 
     // Finally, register the plugin to Cinema 4D. :-)
     return RegisterCommandPlugin(
-            PLUGIN_ID,                    // Plugin ID,
+            PLUGIN_ID,                        // Plugin ID,
             "starters/commands/Create Cube",  // Command Name
             PLUGINFLAG_COMMAND_HOTKEY,        // Flags (options for the plugin)
             nullptr,                          // Icon (none here)
