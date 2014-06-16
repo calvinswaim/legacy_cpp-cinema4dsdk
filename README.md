@@ -31,21 +31,14 @@ C++ code however is of very much advantage.
 
 ## Structure
 
-There is a strict structure to this repository. All __project files__
+There is a strict structure to this repository. All _project files_
 belonging to compilation tools such as Visual Studio, XCode or
-Makefiles are located in the `projects/` directory. Compilation tools
-should output __object files__ to the `obj/` directory while the build
-results are the `cinema4dsdk.cdl64` or `cinema4dsdk.dylib`, respective
-to the target platform.
-
-All __source files__ (ie. `*.cpp` files) are contained in the `src/`
-directory while __includable files__ are contained in the `include/`
-directory. The Cinema 4D plugin __resource folder__ is called `res/`
-which should also contain any image and other required files.
+Makefiles are located in the `projects/` directory.
 
 You may also want to look at the readme file that is available for
-many source files. These have the same name but the Markdown suffix
-(`*.md`) and provide additional information to the example.
+some of the source files. These have the same name as the source file
+but with Markdown suffix (`*.md`) and provide additional information to
+the example.
 
 ## File Headers
 
@@ -54,7 +47,8 @@ contain useful information such as a short description, the experience
 level required to understand the example, tags and names of files that
 should be read and understand before reading that example file.
 
-Take the `src/starters/commands/group-objects.cpp` file for an instance:
+Take the `source/cinema4dsdk/starters/commands/group-objects.cpp` file
+for an instance:
 
 ```cpp
 /**
@@ -92,8 +86,11 @@ understood before reading the current file.
 
 ## Compile
 
-> Note: The project files for the officially supported Visual Studio
-> and XCode versions are not yet available but will come soon.
+> Note: The __XCode__ Project Files are not yet available.
+
+__Visual Studio__
+
+The Visual Studio Solution is located at `projects/visual-studio/cinema4dsdk.sln`.
 
 __c4dmake__
 
@@ -119,7 +116,7 @@ issuetracker of the cpp-cinema4sdk repository.
     $ pwd
     <...>/Cinema 4D R15/plugins/cpp-cinema4dsdk
     $ make -f projects/c4dmake/Makefile plugin
-    
+
 ## Contributions are Welcome!
 
 Don't hesitate to fork this repository and add new stuff to it. GitHub allows
@@ -135,8 +132,7 @@ the file(s).
 
 ## Todo
 
-- Add Visual Studio project files
 - Add XCode project files
 
-
   [c4dmake]: https://github.com/nr-tools/c4dmake
+
