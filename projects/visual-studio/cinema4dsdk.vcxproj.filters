@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{771c4cc9-75ec-4383-bdb7-d53d3dbe25b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\starters">
+      <UniqueIdentifier>{56ab65ff-9dbb-4fd7-8772-7b1ff1ec3f02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\datatype">
+      <UniqueIdentifier>{51bf991c-c363-417b-93f9-025162f90069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\starters\commands">
+      <UniqueIdentifier>{1f76f1f4-3ae5-4cda-bcd8-ac4ca7f87eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{024050c5-352e-418a-ae0d-254d7212b7fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{95325204-99c2-416d-83f1-d8221d98e321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\cinema4dsdk">
+      <UniqueIdentifier>{f0823cdb-d209-4ced-83a4-815f944b2d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\cinema4dsdk\datatype">
+      <UniqueIdentifier>{55e74bc9-29e2-4841-8206-9d385fb811a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\description">
+      <UniqueIdentifier>{b39dae1b-2355-429a-8e7f-18196904d3fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\strings_us">
+      <UniqueIdentifier>{1bac93d8-8a3b-4443-b177-24f574b5d2b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\datatype\floatlist.cpp">
+      <Filter>src\datatype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\starters\starters.cpp">
+      <Filter>src\starters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\starters\commands\create-cube.cpp">
+      <Filter>src\starters\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\starters\commands\group-objects.cpp">
+      <Filter>src\starters\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\starters\commands\iter-hierarchy.cpp">
+      <Filter>src\starters\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\starters\commands\spheres-on-points.cpp">
+      <Filter>src\starters\commands</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\datatype\floatlist.md">
+      <Filter>src\datatype</Filter>
+    </None>
+    <None Include="..\..\src\starters\README.md">
+      <Filter>src\starters</Filter>
+    </None>
+    <None Include="..\..\cinema4dsdk\res\strings_us\c4d_strings.str">
+      <Filter>res\strings_us</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\src\datatype\floatlist.png">
+      <Filter>src\datatype</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\cinema4dsdk\stringutils.h">
+      <Filter>include\cinema4dsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\cinema4dsdk\datatype\floatlist.h">
+      <Filter>include\cinema4dsdk\datatype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cinema4dsdk\res\c4d_symbols.h">
+      <Filter>res</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

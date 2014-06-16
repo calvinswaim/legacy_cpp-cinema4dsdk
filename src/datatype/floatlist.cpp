@@ -28,7 +28,7 @@
 #include <c4d.h>
 #include <cinema4dsdk/stringutils.h>
 #include <cinema4dsdk/datatype/floatlist.h>
-#include "res/c4d_symbols.h"
+#include "c4d_symbols.h"
 
 static String ToString(const FloatlistData& data, Bool detailed=false) {
     String result = "FloatlistData(" + ToString(data.GetCount()) + ")";

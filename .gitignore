@@ -17,3 +17,9 @@ obj/
 *.so
 *.so64
 
+# Visual Studio Project Files
+*.ilk
+*.pdb
+*.sdf
+*.opensdf
+*.suo
