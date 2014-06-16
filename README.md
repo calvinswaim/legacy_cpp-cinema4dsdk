@@ -60,7 +60,6 @@ for an instance:
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/starters/commands/group-objects.cpp
  * description:
  *    This plugin command groups all selected objects under a
  *    single Null object.
@@ -69,9 +68,6 @@ for an instance:
  * read-before: create-cube.cpp
  */
 ```
-
-__file__: The full path of the file in the Cinema4D SDK project relative
-to the projects main directory.
 
 __description__: A short description of the plugin. Some files might have
 an `*.md` file in the same directory with the same name which contains a
@@ -134,5 +130,6 @@ the file(s).
 
 - Add XCode project files
 
-  [c4dmake]: https://github.com/nr-tools/c4dmake
+  [c4dmake]:   https://github.com/nr-tools/c4dmake
+  [starters/]: https://github.com/PluginCafe/cpp-cinema4dsdk/tree/master/source/cinema4dsdk/starters
 

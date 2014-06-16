@@ -19,7 +19,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: src/datatype/floatlist.cpp
  * description: implements a new datatype and UI for Cinema 4D
  * level: expert
  * tags: custom-gui custom-datatype dynamic-ui

@@ -19,7 +19,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: cpp-cinema4dsdk/src/starters/commands/spheres-on-points.cpp
  * description: This plugin command demonstrates how to access points
  *    of spline or polygon objects. It positions a sphere primitive
  *    object on each selected point of an object.

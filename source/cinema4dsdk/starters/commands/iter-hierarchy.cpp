@@ -19,7 +19,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: cpp-cinema4dsdk/src/starters/commands/iter-hierarchy.cpp
  * description: This plugin command demonstrates how to recursively
  *    iterate over a documents object hierarchy and print them to
  *    the console.

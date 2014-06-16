@@ -19,7 +19,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * file: cpp-cinema4dsdk/src/starters/starters.cpp
  * description: registers all plugin examples for starters of the Cinema
  *     4D Plugin SDK.
  */
