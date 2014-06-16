@@ -46,24 +46,25 @@ endif
 
 # The path to the Cinema 4D resource folder must be adjusted when
 # building from another path than the plugins folder.
-C4D_RESOURCE_PATH = $(SUBDIR)/../resource
+C4D_RESOURCE_PATH := $(SUBDIR)/../resource
 
 # Include the Cinema 4D makefile collection relative to the plugin
 # directory. Must be adjusted when built from another location.
 include $(SUBDIR)/c4dmake/c4d.mak
 
 # The base-directory for source-files.
-BASEDIR_SRC = src
-BASEDIR_INCLUDE = include
+BASEDIR_SRC = source
+BASEDIR_INCLUDE = $(BASEDIR_SRC)
 
 # Basename of the target library.
 TARGET_NAME = cinema4dsdk
 
 # Collect a list of all source-files from the source-files directory.
 SOURCES = \
-  $(wildcard $(BASEDIR_SRC)/*.cpp) \
-  $(wildcard $(BASEDIR_SRC)/*/*.cpp) \
-  $(wildcard $(BASEDIR_SRC)/*/*/*.cpp) \
+  $(BASEDIR_SRC)/main.cpp \
+  $(wildcard $(BASEDIR_SRC)/cinema4dsdk/*.cpp) \
+  $(wildcard $(BASEDIR_SRC)/cinema4dsdk/*/*.cpp) \
+  $(wildcard $(BASEDIR_SRC)/cinema4dsdk/*/*/*.cpp) \
 
 # Generate the list of object files from the source-file. The object
 # files will be put into an obj/{platform}[-dbg] directory.
@@ -86,11 +87,10 @@ plugin: $(TARGET)
 $(TARGET): dirs $(OBJECTS)
 	$(call C4D_LINK_DLL,$@) $(OBJECTS)
 
-# Description: Compile *.cpp files into object-files, even when the
-#              header file changed.
+# Description: Compile *.cpp files into object-files, also when the
+#              respective header file changed.
 $(C4D_OBJECTS_DIR)/%.$(C4D_SUFFIX_OBJ): $(BASEDIR_SRC)/%.cpp $(BASEDIR_INCLUDE)/%.h
 	 $(call C4D_COMPILE,$@) $(call C4D_GEN_DEFINES,$(DEFINES)) $(call C4D_GEN_INCLUDES, $(INCLUDES)) $<
-
 $(C4D_OBJECTS_DIR)/%.$(C4D_SUFFIX_OBJ): $(BASEDIR_SRC)/%.cpp $(BASEDIR_SRC)/%.h
 	 $(call C4D_COMPILE,$@) $(call C4D_GEN_DEFINES,$(DEFINES)) $(call C4D_GEN_INCLUDES, $(INCLUDES)) $<
 

@@ -112,7 +112,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectRoot)\include;$(ProjectRoot)\res;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectRoot)\res;$(ProjectRoot)\source;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutputDirectory)\$(TargetName)$(TargetExtension)</OutputFile>
@@ -120,7 +120,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectRoot)\include;$(ProjectRoot)\res;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectRoot)\res;$(ProjectRoot)\source;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Intel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectRoot)\include;$(ProjectRoot)\res;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectRoot)\res;$(ProjectRoot)\source;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutputDirectory)\$(TargetName)$(TargetExtension)</OutputFile>
@@ -136,7 +136,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectRoot)\include;$(ProjectRoot)\res;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectRoot)\res;$(ProjectRoot)\source;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutputDirectory)\$(TargetName)$(TargetExtension)</OutputFile>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Intel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectRoot)\include;$(ProjectRoot)\res;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectRoot)\res;$(ProjectRoot)\source;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutputDirectory)\$(TargetName)$(TargetExtension)</OutputFile>
@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectRoot)\include;$(ProjectRoot)\res;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectRoot)\res;$(ProjectRoot)\source;$(C4D_API_PATH)\_api;$(C4D_API_PATH)\_api\c4d_preview;$(C4D_API_PATH)\_api\c4d_customgui;$(C4D_API_PATH)\_api\c4d_libs;$(C4D_API_PATH)\_api\c4d_gv;$(C4D_API_PATH)\modules\Modeling\res\description;$(C4D_API_PATH)\res\description;$(C4D_API_PATH)\modules\objects\res\description;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutputDirectory)\$(TargetName)$(TargetExtension)</OutputFile>
@@ -165,26 +165,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\datatype\floatlist.cpp" />
-    <ClCompile Include="..\..\src\main.cpp" />
-    <ClCompile Include="..\..\src\starters\commands\create-cube.cpp" />
-    <ClCompile Include="..\..\src\starters\commands\group-objects.cpp" />
-    <ClCompile Include="..\..\src\starters\commands\iter-hierarchy.cpp" />
-    <ClCompile Include="..\..\src\starters\commands\spheres-on-points.cpp" />
-    <ClCompile Include="..\..\src\starters\starters.cpp" />
+    <ClCompile Include="..\..\source\cinema4dsdk\datatype\floatlist.cpp" />
+    <ClCompile Include="..\..\source\main.cpp" />
+    <ClCompile Include="..\..\source\cinema4dsdk\starters\commands\create-cube.cpp" />
+    <ClCompile Include="..\..\source\cinema4dsdk\starters\commands\group-objects.cpp" />
+    <ClCompile Include="..\..\source\cinema4dsdk\starters\commands\iter-hierarchy.cpp" />
+    <ClCompile Include="..\..\source\cinema4dsdk\starters\commands\spheres-on-points.cpp" />
+    <ClCompile Include="..\..\source\cinema4dsdk\starters\starters.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\cinema4dsdk\res\strings_us\c4d_strings.str" />
-    <None Include="..\..\src\datatype\floatlist.md" />
-    <None Include="..\..\src\starters\README.md" />
+    <None Include="..\..\source\cinema4dsdk\datatype\floatlist.md" />
+    <None Include="..\..\source\cinema4dsdk\starters\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\src\datatype\floatlist.png" />
+    <Image Include="..\..\source\cinema4dsdk\datatype\floatlist.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\cinema4dsdk\datatype\floatlist.h" />
-    <ClInclude Include="..\..\include\cinema4dsdk\stringutils.h" />
     <ClInclude Include="..\..\cinema4dsdk\res\c4d_symbols.h" />
+    <ClInclude Include="..\..\source\cinema4dsdk\datatype\floatlist.h" />
+    <ClInclude Include="..\..\source\cinema4dsdk\stringutils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
